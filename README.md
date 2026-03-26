@@ -16,6 +16,7 @@ plt.show()
 ```
 ### Results
 ![Visualisation of Top Skills for Data Analyst in France](3_Project/images/skill_demand_data_roles.png)
+
 Bar chart illustrating the salaries for the top three data roles, along with the five key skills associated with each of them.
 ### Insights:
 - SQL is a core skill across all three roles, ranking at or near the top every time, making it essential regardless of the data career path.
