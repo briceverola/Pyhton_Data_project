@@ -1,14 +1,20 @@
 # Overview
+This project explores the Data Analyst job market with a focus on identifying the most valuable skills to learn.  
 
+Starting from a France-based perspective for the first two parts, I then extend the analysis to major European data markets (United Kingdom, Germany, France, and the Netherlands) to ensure more robust and reliable insights.  
+
+Using a dataset sourced from Luke Barousse’s Python course, which includes job titles, salaries, locations, and required skills, I analyze key aspects of the data job market.  
+
+Through a series of Python analyses and visualizations, I investigate which skills are the most in-demand, which offer the highest salaries, and how combining both can help identify the most optimal skills for Data Analysts.
 
 
 # The Questions
 Below are the questions I want to answer in my project:
 
-What are the skills most in demand for the top 3 most popular data roles?
-How are in-demand skills trending for Data Analysts?
-How well do jobs and skills pay for Data Analysts?
-What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
+1. What are the skills most in demand for the top 3 most popular data roles?
+2. How are in-demand skills trending for Data Analysts?
+3. How well do jobs and skills pay for Data Analysts?
+4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
 
 # Tools I Used
 For my deep dive into the data analyst job market, I harnessed the power of several key tools:
@@ -44,6 +50,23 @@ df = dataset['train'].to_pandas()
 df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
 ```
+
+## Countries Filters 
+In the first two parts of my analysis, focusing on the french job market, I apply filters to the dataset, narrowing down to roles based in France.
+
+```python
+df_FR = df[df['job_country'] == 'France']
+```
+
+For the last two parts of my analysis, since there were many job postings that did not list a salary, I expand the scope beyond France to include major European data markets. 
+
+I filter the dataset to focus on the United Kingdom, Germany, France, and the Netherlands, ensuring a balance between data availability and market consistency.
+
+```python
+countries = ['United Kingdom', 'Germany', 'France', 'Netherlands']
+df_EU = df[df['job_country'].isin(countries)]
+```
+
 
 # The Analysis
 Each Jupyter notebook for this project aimed at investigating specific aspects of the data job market. Here’s how I approached each question:
@@ -224,8 +247,34 @@ Throughout this project, I deepened my understanding of the data analyst job mar
 
 # Insights
 
+This project highlights several key insights into the Data Analyst job market in Europe:
+
+- **Demand vs Salary Trade-off:** Core skills such as SQL and Python offer the best balance between high demand and strong salaries, making them essential for maximizing career opportunities.
+
+- **Value of Specialized Skills:** More advanced or niche skills (e.g., cloud and data engineering tools) tend to be associated with higher salaries despite lower demand, highlighting their strong market value.
+
+- **Role Differentiation:** There is a clear distinction between business-oriented roles (Data Analyst) and more technical roles (Data Engineer, Data Scientist), reflected in both required skills and salary distributions.
+
+- **Technology Segmentation:** Programming skills dominate the most optimal zone (high demand & high salary), while analyst tools (Excel, Tableau, Power BI) are widely required but less differentiating in terms of compensation.
+
 
 # Challenges I Faced
 
+This project involved several challenges that helped strengthen my data analysis skills:
+
+- **Limited Data Availability (France):** The French dataset alone was not sufficient for robust analysis, which required expanding the scope to other European countries while maintaining consistency.
+
+- **Data Inconsistencies:** Handling missing or inconsistent data entries requires careful consideration and thorough data-cleaning techniques to ensure the integrity of the analysis.
+
+- **Complex Data Visualization:** Designing effective visual representations of complex datasets was challenging but critical for conveying insights clearly and compellingly.
+
+- **Balancing Breadth and Depth:** Deciding how deeply to dive into each analysis while maintaining a broad overview of the data landscape required constant balancing to ensure comprehensive coverage without getting lost in details.
+
 
 # Conclusion
+
+This project provides a comprehensive view of the Data Analyst job market in Europe, highlighting the skills that matter most in terms of both demand and salary.  
+
+By combining multiple analyses, it shows that the most valuable skills are those that balance strong demand with high earning potential, particularly programming skills like SQL and Python. It also emphasizes the importance of complementing foundational skills with more advanced or specialized tools to stand out in the job market.  
+
+Overall, this project offers actionable insights for anyone looking to build or advance a career in any data science role, while also demonstrating the importance of adapting analysis scope and methodology based on data availability.
