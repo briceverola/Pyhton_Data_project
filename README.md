@@ -19,7 +19,7 @@ plt.show()
 #### Results
 ![Visualisation of Top Skills for Data Analyst in France](3_Project/images/skill_demand_data_roles.png)
 
-Bar chart illustrating the salaries for the top three data roles, along with the five key skills associated with each of them.
+*Bar chart illustrating the salaries for the top three data roles, along with the five key skills associated with each of them.*
 #### Insights:
 - SQL is a core skill across all three roles, ranking at or near the top every time, making it essential regardless of the data career path.
 - Data Engineers stand out with more technical and infrastructure-focused requirements, including tools like Spark and cloud platforms (AWS, Azure), showing a stronger emphasis on big data and system architecture.
@@ -43,6 +43,7 @@ plt.show()
 ```
 #### Results
 ![Trending top skills for DA in france over time](3_Project/images/skill_trend_DA.png)
+
 *Bar graph visualizing the trending top skills for data analysts in France in 2023.*
 
 #### Insights
@@ -107,3 +108,73 @@ plt.show()
 - The top chart shows that more specialized and technical skills such as Terraform, Kafka, and MongoDB are associated with the highest salaries, suggesting that advanced infrastructure and data engineering-related skills can significantly increase earning potential for Data Analysts.
 - The bottom chart highlights that foundational and widely used tools like Python, SQL, and Excel are the most in-demand skills. These skills are essential for employability, even if they are not always linked to the highest salaries.
 - There is a clear gap between the highest-paying skills and the most in-demand ones. This suggests that Data Analysts can benefit from combining strong core skills (Python, SQL) with more specialized tools to maximize both job opportunities and salary potential.
+
+## 4. What is the most optimal skill to learn for Data Analysts?
+To identify the most valuable skills to learn, I analyze both their demand (percentage of job postings) and their associated median salary across European Data Analyst roles.  
+
+This approach allows me to highlight the skills that offer the best combination of strong market demand and high earning potential.
+
+View my notebook with detailed steps here: [5_Optimal_Skills](3_Project/5_Optimal_Skills.ipynb)
+
+#### Visualize Data
+
+```python
+from adjustText import adjust_text
+import matplotlib.pyplot as plt
+
+plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand['median_salary'])
+plt.show()
+```
+
+#### Results
+![optimal skills for data analyst](3_Project/images/optimal_skills_DA.png)
+
+*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in top European countries.*
+
+#### Insights
+- Core skills like SQL and Python stand out as the most optimal, combining both high demand and high median salaries. This makes them essential skills for Data Analysts aiming to maximize both employability and earning potential in Europe.
+- Specialized or less common skills such as R, Azure, and Databricks offer relatively high salaries despite lower demand, suggesting that niche technical expertise can lead to strong compensation opportunities.
+- Widely used tools like Excel, Tableau, and Power BI are highly востребed but associated with lower median salaries, indicating that while they are important for getting a job, they are less differentiating in terms of salary growth.
+
+### Visualizing Different Technologies
+
+To enrich the analysis, I group skills by technology categories (e.g., Programming, Cloud, BI tools) and use color coding in the visualization to highlight patterns across different types of skills.
+
+#### Visualize Data
+
+```python
+from matplotlib.ticker import PercentFormatter
+
+# Create a scatter plot
+scatter = sns.scatterplot(
+    data=df_DA_skills_tech_high_demand,
+    x='skill_percent',
+    y='median_salary',
+    hue='technology',  # Color by technology
+    palette='bright',  # Use a bright palette for distinct colors
+    legend='full'  # Ensure the legend is shown
+)
+plt.show()
+```
+
+#### Results
+![optimal skills categorized](3_Project/images/optimal_skills_category.png)
+
+*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in top European countries with color labels for technology.*
+
+#### Insights
+
+- Programming skills (e.g., Python, SQL, R) dominate the upper-right area of the chart, combining high demand with high salaries. This highlights their central role and strong value in the European Data Analyst job market.
+- Cloud and data engineering-related skills (e.g., Azure, Databricks) tend to offer higher salaries despite lower demand, indicating that more advanced technical expertise is well rewarded even if less frequently required.
+- Analyst tools (e.g., Excel, Tableau, Power BI) are more concentrated in the lower part of the chart, showing high demand but comparatively lower salaries. This suggests they are essential baseline skills but less differentiating in terms of compensation.
+
+# What I Learned
+
+
+# Insights
+
+
+# Challenges I Faced
+
+
+# Conclusion
