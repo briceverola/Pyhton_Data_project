@@ -2,6 +2,7 @@
 Each Jupyter notebook for this project aimed at investigating specific aspects of the data job market. Here’s how I approached each question:
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
 To identify the most in-demand skills across the three most popular data roles, I first filtered the dataset to focus on the most common positions. Then, I extracted the top five skills associated with each of these roles. This analysis highlights the key job titles and their most relevant skills, helping me understand which competencies to prioritize based on the role I aim to pursue.
+
 View my notebook with detailed steps here: [2_Skill_Demand](3_Project/2_Skill_Demand.ipynb)
 ### Visualize Data
 ```
@@ -44,7 +45,8 @@ plt.show()
 *Bar graph visualizing the trending top skills for data analysts in France in 2023.*
 
 ### Insights
-- SQL remains consistently the most in-demand skill throughout the year, with a strong peak in mid-year before dropping sharply in September and recovering again toward the end of the year.
-- Python follows a similar upward trend, gradually increasing to a peak in summer, suggesting higher demand for more technical analytical skills during that period.
-- BI tools (Tableau, Power BI, Excel) show more stable but lower demand, with smaller fluctuations over time, indicating they are consistently required but less subject to strong seasonal variation compared to SQL and Python.
+- SQL remains the most consistently in-demand skill across all months, maintaining a high level throughout the year with noticeable peaks in summer and early autumn. This confirms its central role in Data Analyst positions in France.
+- Python follows a similar pattern but with slightly more variation, reaching a strong peak in summer. This suggests an increased demand for more advanced analytical and technical skills during that period.
+- BI tools (Power BI and Tableau) show moderate but stable demand, with occasional increases during mid-year. This indicates they are regularly required but less dominant compared to core technical skills like SQL and Python.
+- Excel remains relatively stable at a lower level, suggesting it is a baseline skill expected across roles rather than a key differentiator in the job market.
 
