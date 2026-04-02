@@ -87,7 +87,7 @@ for i, job_title in enumerate(job_titles):
 plt.show()
 ```
 #### Results
-![Visualisation of Top Skills for Data Analyst in France](3_Project/images/skill_demand_data_roles.png)
+![Visualisation of Top Skills for Data Analyst in France](images/skill_demand_data_roles.png)
 
 *Bar chart illustrating the salaries for the top three data roles, along with the five key skills associated with each of them.*
 #### Insights:
@@ -112,7 +112,7 @@ plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
 plt.show()
 ```
 #### Results
-![Trending top skills for DA in france over time](3_Project/images/skill_trend_DA.png)
+![Trending top skills for DA in france over time](images/skill_trend_DA.png)
 
 *Bar graph visualizing the trending top skills for data analysts in France in 2023.*
 
@@ -140,7 +140,7 @@ plt.gca().xaxis.set_major_formatter(ticks_x)
 plt.show()
 ``` 
 #### Results
-![salary distibution for data roles](3_Project/images/salary_distribution_data.png)
+![salary distibution for data roles](images/salary_distribution_data.png)
 
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
@@ -169,7 +169,7 @@ plt.show()
 ```
 
 #### Results 
-![top skills and salary for data analyst](3_Project/images/skills_salary_analysis.png)
+![top skills and salary for data analyst](images/skills_salary_analysis.png)
 
 *Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in top European countries.*
 
@@ -197,7 +197,7 @@ plt.show()
 ```
 
 #### Results
-![optimal skills for data analyst](3_Project/images/optimal_skills_DA.png)
+![optimal skills for data analyst](images/optimal_skills_DA.png)
 
 *A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in top European countries.*
 
@@ -228,7 +228,7 @@ plt.show()
 ```
 
 #### Results
-![optimal skills categorized](3_Project/images/optimal_skills_category.png)
+![optimal skills categorized](images/optimal_skills_category.png)
 
 *A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in top European countries with color labels for technology.*
 
