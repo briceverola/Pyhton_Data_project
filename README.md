@@ -97,7 +97,7 @@ plt.show()
 
 ## 2. How are in-demand skills trending for Data Analysts?
 
-To analyze how skills evolved throughout 2023 for Data Analysts, I filtered the dataset to include only relevant roles and grouped the required skills by the posting month. This allowed me to identify the top five skills for each month, highlighting how their popularity changed over the year.
+To analyze how skills evolved between 2023 and 2025 for Data Analysts, I filtered the dataset to include only relevant roles and grouped the required skills by the posting month. This allowed me to identify the top five skills for each month, highlighting how their popularity changed over the year.
 
 View my notebook with detailed steps here: [3_Skills_Trend](3_Project/3_Skills_Trend.ipynb).
 
@@ -114,7 +114,7 @@ plt.show()
 #### Results
 ![Trending top skills for DA in france over time](images/skill_trend_DA.png)
 
-*Bar graph visualizing the trending top skills for data analysts in France in 2023.*
+*Bar graph visualizing the trending top skills for data analysts in France between 2023 and 2025.*
 
 #### Insights
 - SQL remains the most consistently in-demand skill across all months, maintaining a high level throughout the year with noticeable peaks in summer and early autumn. This confirms its central role in Data Analyst positions in France.
